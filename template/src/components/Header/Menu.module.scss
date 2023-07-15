@@ -1,0 +1,37 @@
+.Menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-direction: row;
+    z-index: -1;
+}
+
+@media (max-width: 825px) {
+    .Menu  {
+        position: fixed;
+        font-size: var(--font-size-l);
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 1000px;
+        flex-direction: column;
+        backdrop-filter: blur(2px);
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+    }
+    .collapsed{
+        position: fixed;
+        font-size: var(--font-size-l);
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        backdrop-filter: blur(2px);
+        justify-content: center;
+        align-items: center;
+    }
+}
