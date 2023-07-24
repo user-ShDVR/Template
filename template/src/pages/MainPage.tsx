@@ -1,5 +1,9 @@
 import { FC } from 'react'
 import { classNames } from '../components/classNames/classNames';
+import { Hero } from '../components/Hero/Hero';
+import { Cards } from '../components/cards/Cards';
+import { ReactComponent as HeroBgGradient } from '../assets/lights.svg';
+import { Content } from '../components/Content/Content';
 
 interface MainPageProps {
     className?: string;
@@ -7,12 +11,12 @@ interface MainPageProps {
 
 export const MainPage: FC<MainPageProps> = ({ className }) => {
     return (
-        <div id='main' className={classNames("page-wrapper", {}, [className])}>
+        <main id='main' className={classNames("page-wrapper", {}, [className])}>
             
-            <main>
-                123
-            </main>
-
-        </div>
+            <Hero />
+            <HeroBgGradient className="gradient" />
+            <Cards />
+            <Content />
+        </main>
     )
 }

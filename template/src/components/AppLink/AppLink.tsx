@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Link, LinkProps } from 'react-router-dom';
+import { LinkProps } from 'react-router-dom';
 import cls from './AppLink.module.scss';
 import { classNames } from '../classNames/classNames';
 import { HashLink } from 'react-router-hash-link';
@@ -27,6 +27,7 @@ export const AppLink: FC<AppLinkProps> = (props) => {
             smooth
             to={to}
             className={classNames(cls.AppLink, {}, [className, cls[theme]])}
+            // eslint-disable-next-line react/jsx-props-no-spreading
             {...otherProps}
         >
             {children}

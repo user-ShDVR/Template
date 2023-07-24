@@ -2,18 +2,19 @@
   width: 100%;
   background: var(--header-bg-color);
   height: var(--header-height);
+  backdrop-filter: blur(15px);
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 5px 31px 0px rgba(0, 0, 0, 0.06);
   z-index: 10;
+  border-bottom: 1px solid rgba(217, 217, 217, 0.05);;
 }
 
 .Header {
   width: 100%;
-  max-width: 1420px;
-  padding: 0 2em;
+  max-width: 1440px;
+  padding: 0 1em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,7 +50,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 5px 31px 0px rgba(0, 0, 0, 0.06);
     z-index: 10;
   }
 

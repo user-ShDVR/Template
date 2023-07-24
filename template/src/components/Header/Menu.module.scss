@@ -2,13 +2,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
     flex-direction: row;
     z-index: -1;
+    font-size: var(--font-size-s);
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.05);
+
+}
+.MenuLink {
+    color: #E6E3FB;
 }
 
 @media (max-width: 825px) {
-    .Menu  {
+    .Menu {
         position: fixed;
         font-size: var(--font-size-l);
         width: 100vw;
@@ -21,7 +30,8 @@
         align-items: center;
         transition: all 0.3s;
     }
-    .collapsed{
+
+    .collapsed {
         position: fixed;
         font-size: var(--font-size-l);
         display: flex;
@@ -30,6 +40,7 @@
         top: 0;
         left: 0;
         flex-direction: column;
+        border-radius: 0px;
         backdrop-filter: blur(2px);
         justify-content: center;
         align-items: center;

@@ -1,0 +1,92 @@
+.Cards {
+    position: relative;
+    height: 100vh;
+    min-width: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template: 
+        "a a a a" 250px 
+        "b b b b" 1px
+        "c c c c" 250px;
+    column-gap: 30px;
+    justify-items: center;
+
+}
+
+hr {
+    width: 100%;
+    grid-column: 1/1;
+    grid-row: 2;
+    border: 0;
+    height: 1px;
+    grid-area: b;
+    background-image: linear-gradient(to right, rgba(147, 145, 177, 0), rgba(147, 145, 177, 0.3), rgba(147, 145, 177, 0.3), rgba(147, 145, 177, 0));
+}
+
+
+
+.card {
+    font: var(--font-s);
+    padding: 20px 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 313px;
+    position: relative;
+
+    &:nth-child(-n + 4) {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -15px;
+            width: 1px;
+            background: linear-gradient(180deg, rgba(147, 145, 177, 0.00) 0%, rgba(147, 145, 177, 0.30) 100%);
+        }
+    }
+
+    // Правая граница разделителей (hr) между карточками во второй строке
+    &:nth-child(n + 6) {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -15px;
+            width: 1px;
+            background: linear-gradient(180deg, rgba(147, 145, 177, 0.30) 0%, rgba(147, 145, 177, 0.00) 100%);// Здесь можно установить другой цвет для разделителя во второй строке
+        }
+    }
+
+    // Убираем разделитель у последней карточки в каждой строке
+    &:nth-child(n+4):not(:nth-child(n+6)) {
+        &::after {
+            display: none;
+        }
+    }
+
+    &:nth-child(n+9):not(:nth-child(-n+4)) {
+        &::after {
+            display: none;
+        }
+    }
+
+}
+
+
+.cardText {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+
+    p {
+        width: 100%;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 130%;
+        font-size: 18px;
+        width: 313px;
+        color: rgba(147, 145, 177, 0.50);
+    }
+}

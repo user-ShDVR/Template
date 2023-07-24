@@ -1,0 +1,56 @@
+.Hero {
+    // min-width: 100%;
+    min-height: calc(100vh - var(--header-height));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 145px;
+}
+
+.HeroInformation {
+    z-index: 1;
+    width: 514px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.HeroText {
+    display: flex;
+    gap: 18px;
+    flex-direction: column;
+    text-align: center;
+    h1 {
+    color: #FFF;
+    font-family: Krona One;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 81.408px;
+
+    }
+    p {
+        color: #78899E;
+        font-family: Inter;
+        font-size: 19px;
+        line-height: 160%;
+        letter-spacing: 0.285px;
+    }
+}
+
+.img {
+    position: absolute;
+    top: 250px;
+    left: 0;
+    z-index: 0;
+    max-width: 100%;
+}
+.Safari{
+    z-index: 1;
+    max-width: 100%;
+    height: auto;
+}
+

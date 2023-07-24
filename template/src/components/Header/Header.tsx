@@ -3,6 +3,7 @@ import cls from './Header.module.scss'
 import { Button, ThemeButton } from '../Button/Button'
 import { Menu } from './Menu'
 import { classNames } from '../classNames/classNames'
+import { ReactComponent as Logo } from '../../assets/Logo.svg';
 
 
 export const Header: FC = () => {
@@ -10,11 +11,11 @@ export const Header: FC = () => {
     return (
         <header className={cls.headerContainer}>
             <div className={cls.Header}>
-                <h1 className={cls.Logo}>LOGO</h1>
+                <h1 className={cls.Logo}><Logo /></h1>
                 <Menu burger={collapsed} />
                 <div className={cls.HeaderBtn}>
                     <Button theme={ThemeButton.CLEAR} >Login</Button>
-                    <Button theme={ThemeButton.PRIMARY} >Sign up</Button>
+                    <Button theme={ThemeButton.OUTLINE} >Sign up</Button>
                     <div
                         onClick={() => setCollapsed(!collapsed)}
                         className={classNames(cls.burger, { [cls.open]: collapsed }, [])}
