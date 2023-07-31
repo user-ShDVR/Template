@@ -14,7 +14,8 @@ export default defineConfig({
         google: {
             families: [
                 'Krona One',
-                'Inter'
+                'Inter',
+                'Montserrat'
             ],
         },
     }),],

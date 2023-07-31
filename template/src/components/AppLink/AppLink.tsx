@@ -7,6 +7,7 @@ import { HashLink } from 'react-router-hash-link';
 export enum AppLinkTheme {
     PRIMARY = 'primary',
     INVERTED = 'inverted',
+    MENU = 'MenuLink'
 }
 
 interface AppLinkProps extends LinkProps {

@@ -1,12 +1,12 @@
 .Cards {
     position: relative;
+    top: -250px;
     height: 100vh;
     min-width: 100%;
     z-index: 1;
     display: grid;
-    grid-template: 
-        "a a a a" 250px 
-        "b b b b" 1px
+    grid-template:
+        "a a a a" 250px "b b b b" 1px
         "c c c c" 250px;
     column-gap: 30px;
     justify-items: center;
@@ -16,7 +16,6 @@
 hr {
     width: 100%;
     grid-column: 1/1;
-    grid-row: 2;
     border: 0;
     height: 1px;
     grid-area: b;
@@ -55,7 +54,7 @@ hr {
             bottom: 0;
             right: -15px;
             width: 1px;
-            background: linear-gradient(180deg, rgba(147, 145, 177, 0.30) 0%, rgba(147, 145, 177, 0.00) 100%);// Здесь можно установить другой цвет для разделителя во второй строке
+            background: linear-gradient(180deg, rgba(147, 145, 177, 0.30) 0%, rgba(147, 145, 177, 0.00) 100%); // Здесь можно установить другой цвет для разделителя во второй строке
         }
     }
 
@@ -88,5 +87,81 @@ hr {
         font-size: 18px;
         width: 313px;
         color: rgba(147, 145, 177, 0.50);
+    }
+}
+
+@media (max-width: 500px) {
+    .Cards {
+        height: 100%;
+        min-width: 100%;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    hr {
+        display: none;
+    }
+
+    .card {
+        display: flex;
+        padding: 15.615px 0px 23.423px 0px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        row-gap: 23.423px;
+
+        &::after {
+            display: none;
+        }
+
+        &:nth-child(n):not(:last-child) {
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                height: 1px;
+                width: 100%;
+                background: linear-gradient(to right, rgba(147, 145, 177, 0), rgba(147, 145, 177, 0.3), rgba(147, 145, 177, 0.3), rgba(147, 145, 177, 0));
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) and (min-width: 500px) {
+    .card {
+        max-width: 198px;
+        gap: 18px;
+        padding: 30px 0 30px;
+    }
+
+    .cardText {
+        max-width: 198px;
+
+        p {
+            max-width: 198px;
+            font-size: 15px;
+            font-weight: 400;
+        }
+    }
+}
+@media (max-width: 1800px) and (min-width: 1300px){
+    .card {
+        max-width: 300px;
+        gap: 20px;
+        padding: 30px 0 30px;
+    }
+    .cardText {
+        max-width: 300px;
+
+        p {
+            max-width: 300px;
+        }
     }
 }

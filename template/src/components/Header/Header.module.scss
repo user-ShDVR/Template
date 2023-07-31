@@ -22,12 +22,8 @@
 }
 
 .Logo {
-  color: var(--primary-color);
-  text-align: center;
-  font-size: 21.704px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 32.556px;
+  display: flex;
+  align-items: center;
 }
 
 .HeaderBtn {
@@ -157,4 +153,21 @@
   }
 
 
+}
+@media (max-width: 500px) {
+  .HeaderBtn {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+  .headerContainer{
+    border-bottom: none;
+    backdrop-filter: blur(2px);
+  }
+}
+@media (max-width: 1440px) and (min-width: 825px){
+  .Header{
+    padding: 0 3em;
+  }
 }
